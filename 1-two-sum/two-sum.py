@@ -3,8 +3,8 @@ class Solution:
         prevMap = {} # val : index
 
         for i, n in enumerate(nums):
-            diff = target - n
+            diff = target - n # we are looking for a number "diff" such that diff + n = target
             if diff in prevMap:
                  return [prevMap[diff], i]
             prevMap[n] = i     
-        
+        #complexity is O(n) - We iterate through the list exactly once.
